@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="reader">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Account">
+                    <xs:complexType>
+                        <xs:attribute name="ID" type="xs:integer" use="required" />
+                        <xs:attribute name="Password" type="xs:string" use="required" />
+                        <xs:attribute name="Username" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="BookList">
+                    <xs:complexType>
+                        <xs:attribute name="Author" type="xs:string" use="required" />
+                        <xs:attribute name="Category" type="xs:string" use="required" />
+                        <xs:attribute name="ID" type="xs:integer" use="required" />
+                        <xs:attribute name="InStock" type="xs:integer" use="required" />
+                        <xs:attribute name="Name" type="xs:string" use="required" />
+                        <xs:attribute name="ReleaseYear" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Code" type="xs:string" use="required" />
+            <xs:attribute name="FirstName" type="xs:string" use="required" />
+            <xs:attribute name="ID" type="xs:integer" use="required" />
+            <xs:attribute name="LastName" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
